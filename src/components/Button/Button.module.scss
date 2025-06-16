@@ -1,0 +1,22 @@
+.Button {
+  color: #fff;
+  appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  &.normal {
+    background-color: #404040;
+  }
+
+  &.active {
+    background-color: #1d8212;
+  }
+
+  &.transparent {
+    background: none;
+  }
+}

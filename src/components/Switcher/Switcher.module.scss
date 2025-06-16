@@ -1,0 +1,28 @@
+.Container {
+  --container-padding: 4px;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: var(--container-padding);
+  width: fit-content;
+
+  & > * {
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: var(--thumb-top-offset);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    background-color: rgb(90, 14, 57);
+    border-radius: 7px;
+    transform: translateX(calc(var(--thumb-offset) - var(--container-padding)));
+    transition: 0.3s;
+  }
+}
